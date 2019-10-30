@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import view.GameKeyView;
+import view.employmentscreen;
 import view.mainView;
 import view.topView;
 
@@ -23,7 +24,7 @@ public class Controller implements ActionListener{
 	GameKeyView 	gameKeyView;		//Road to Boss画面
 	topView			topView;			//トップ画面
 	mainView 		mainView;			// メイン画面
-
+	employmentscreen employmentscreen;
 
 
 
@@ -55,6 +56,7 @@ public class Controller implements ActionListener{
 		// メイン画面クラスをインスタンス化
 		mainView = new mainView(this);
 
+		employmentscreen = new employmentscreen(this);
 
 	}
 	/**
@@ -66,14 +68,14 @@ public class Controller implements ActionListener{
 		gameKeyView.setVisible(true);
 
 		// モード選択画面を表示
-		gameKeyView.setPanel(mainView.getPanel());
+		gameKeyView.setPanel(employmentscreen.getPanel());
 
 	}
 
 	public void start() {
 
 		// モード選択画面を表示
-		gameKeyView.setPanel(mainView.getPanel());
+		gameKeyView.setPanel(employmentscreen.getPanel());
 
 	}
 
