@@ -18,7 +18,7 @@ public class GameKeyView extends JFrame {
 
 		setLocation(200, 100);
 
-		setSize(1000, 1000);
+		setSize(1500, 900);
 
 		cntnr = getContentPane();
 		cntnr.setLayout(null);
@@ -27,7 +27,7 @@ public class GameKeyView extends JFrame {
 
 	public void setPanel(JPanel panel) {
 
-		panel.setBounds(0, 0, 1000, 600);
+		panel.setBounds(0, 0, 1500, 900);
 
 		cntnr.add(panel);
 

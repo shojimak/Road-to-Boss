@@ -3,7 +3,6 @@ package view;
 import java.awt.Dimension;
 import java.awt.Font;
 
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -60,22 +59,17 @@ public class mainView extends JFrame{
 
 		resourcesBtn = new JButton("人材雇用");
 		resourcesBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
-		
+
 		trainingBtn = new JButton("育成");
 		trainingBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
-		trainingBtn.setHorizontalTextPosition(JButton.CENTER);
-		trainingBtn.setBorder(BorderFactory.createEmptyBorder());
-		trainingBtn.setContentAreaFilled(false);
+
+
 		requestBtn = new JButton("開発依頼");
 		requestBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
-		requestBtn.setHorizontalTextPosition(JButton.CENTER);
-		requestBtn.setBorder(BorderFactory.createEmptyBorder());
-		requestBtn.setContentAreaFilled(false);
+
+
 		extensionBtn = new JButton("増築");
 		extensionBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
-		extensionBtn.setHorizontalTextPosition(JButton.CENTER);
-		extensionBtn.setBorder(BorderFactory.createEmptyBorder());
-		extensionBtn.setContentAreaFilled(false);
 
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
 		panel.setBorder(border);
@@ -93,9 +87,10 @@ public class mainView extends JFrame{
 		cacheyenLbl.setBounds(380, 10, 200, 20);
 		yearLbl.setBounds(810, 10, 100, 20);
 		monthLbl.setBounds(900, 10, 70, 20);
-		resourcesBtn.setBounds(380, 200, 200, 70);
-		trainingBtn.setBounds(380, 290, 200, 70);
-		requestBtn.setBounds(380, 380, 200, 70);
+		resourcesBtn.setBounds(20, 750, 200, 70);
+		trainingBtn.setBounds(280, 750, 200, 70);
+		requestBtn.setBounds(540, 750, 200, 70);
+		extensionBtn.setBounds(800, 750, 200, 70);
 
 		/**
 		 * 各部品をパネルに追加
@@ -109,6 +104,7 @@ public class mainView extends JFrame{
 		panel.add(resourcesBtn);
 		panel.add(trainingBtn);
 		panel.add(requestBtn);
+		panel.add(extensionBtn);
 
 		/**
 		 * ボタンにアクションリスナーを追加
@@ -120,13 +116,13 @@ public class mainView extends JFrame{
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
-		
+
 		/**
 		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
 		trainingBtn.setActionCommand("MODESELECT_LOCAL");
 		requestBtn.setActionCommand("MODESELECT_FREE");
 		 */
-		
+
 
 		/**
 		 * 背景設定
