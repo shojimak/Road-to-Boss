@@ -1,22 +1,27 @@
 package view;
-//勝本
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
-import javax.swing.JButton;
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.border.BevelBorder;
 
 import controller.Controller;
 /**
- * 雇用選び画面
+ * 育成画面
  */
-public class employmentscreen extends JFrame{
+public class raisescreen extends JFrame{
 
 	private JPanel panel;
+	private JPanel waku1;
+	private JPanel waku2;
+	private JPanel waku3;
 	private JLabel titleLbl;			//総資産
 	private JLabel totalLbl;           //
 	private JLabel cacheLbl;			//キャッシュフロー
@@ -24,20 +29,22 @@ public class employmentscreen extends JFrame{
 	private JLabel yearLbl;			//年
 	private JLabel monthLbl;			//月
 	private JLabel erandeLbl;
-	private JLabel name1Lbl;
+	private JLabel listLbl;
 	private JLabel name2Lbl;
 	private JLabel name3Lbl;
-	private JLabel kyaraname1;
+
 	private JLabel kyaraname2;
 	private JLabel kyaraname3;
 	private JLabel nouryoku1;
 	private JLabel nouryoku2;
 	private JLabel nouryoku3;
 
-	private JLabel tikara1;
-	private JLabel tikara2;
-	private JLabel tikara3;
-	private JLabel tikara4;
+	private JLabel comment;
+
+	private JRadioButton proguramu;
+	private JRadioButton dezain;
+	private JRadioButton sekkei;
+	private JRadioButton siki;
 
 	private JLabel tikara5;
 	private JLabel tikara6;
@@ -49,13 +56,11 @@ public class employmentscreen extends JFrame{
 	private JLabel tikara11;
 	private JLabel tikara12;
 
+	private JLabel kikanLbl;
+	private JTextField kikantext;
+	private JLabel tuki;
 
-	private JLabel puroguramu1;
-	private JLabel dezain1;
-	private JLabel sekkei1;
-	private JLabel siki1;
-	private JLabel geshuu1;
-	private JLabel geshuusu1;
+
 	private JLabel puroguramu2;
 	private JLabel dezain2;
 	private JLabel sekkei2;
@@ -69,21 +74,22 @@ public class employmentscreen extends JFrame{
 	private JLabel geshuu3;
 	private JLabel geshuusu3;
 
-	private JButton employmentBtn;
-	private JButton backBtn;
-	private JButton listBtn;
+	ButtonGroup group = new ButtonGroup();
 
 
 	/**
 	 * コンストラクタ
 	 */
-	public employmentscreen(Controller ctrl) {
+	public raisescreen(Controller ctrl) {
 
 
 		/**
 		 * 各部品のインスタンス生成
 		 */
 		panel = new JPanel();
+		waku1 = new JPanel();
+		waku2 = new JPanel();
+		waku3 = new JPanel();
 
 		titleLbl = new JLabel("総資産");
 		titleLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -103,20 +109,16 @@ public class employmentscreen extends JFrame{
 		monthLbl = new JLabel("12月");
 		monthLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
-		erandeLbl = new JLabel("雇用したい人を選んでね");
+		erandeLbl = new JLabel("育成したい人を選んでね");
 		erandeLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
-
-		name1Lbl = new JLabel("名前");
-		name1Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		listLbl = new JLabel("社員一覧");
+		listLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
 
 		name2Lbl = new JLabel("名前");
 		name2Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		name3Lbl = new JLabel("名前");
 		name3Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-
-		kyaraname1 = new JLabel("スタッ　フ子");
-		kyaraname1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		kyaraname2 = new JLabel("オタ　タロウ");
 		kyaraname2.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -128,14 +130,8 @@ public class employmentscreen extends JFrame{
 		nouryoku2.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		nouryoku3 = new JLabel("能力");
 		nouryoku3.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		tikara1 = new JLabel("C");
-		tikara1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		tikara2 = new JLabel("C");
-		tikara2.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		tikara3 = new JLabel("C");
-		tikara3.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		tikara4 = new JLabel("C");
-		tikara4.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		comment = new JLabel("育成したい能力、期間を決めてね");
+		comment.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
 
 		tikara5 = new JLabel("B");
 		tikara5.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -153,18 +149,27 @@ public class employmentscreen extends JFrame{
 		tikara11.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		tikara12 = new JLabel("S");
 		tikara12.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		puroguramu1 = new JLabel("プログラム");
-		puroguramu1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		dezain1 = new JLabel("デザイン");
-		dezain1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		sekkei1 = new JLabel("設計");
-		sekkei1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		siki1 = new JLabel("指揮");
-		siki1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		geshuu1 = new JLabel("月収");
-		geshuu1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		geshuusu1 = new JLabel("XX万");
-		geshuusu1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+
+		proguramu = new JRadioButton("プログラム");
+		proguramu.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 15));
+		proguramu.setBackground(Color.ORANGE);
+		dezain = new JRadioButton("デザイン");
+		dezain.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 15));
+		dezain.setBackground(Color.ORANGE);
+		sekkei = new JRadioButton("設計");
+		sekkei.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 15));
+		sekkei.setBackground(Color.ORANGE);
+		siki = new JRadioButton("指揮");
+		siki.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 15));
+		siki.setBackground(Color.ORANGE);
+
+		kikanLbl = new JLabel("期間");
+		kikanLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		tuki = new JLabel("ヶ月");
+		tuki.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+
+
+
 		puroguramu2 = new JLabel("プログラム");
 		puroguramu2.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		dezain2 = new JLabel("デザイン");
@@ -189,23 +194,29 @@ public class employmentscreen extends JFrame{
 		geshuu3.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		geshuusu3 = new JLabel("XX万");
 		geshuusu3.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		kikantext = new JTextField("");
 
-		employmentBtn = new JButton("雇用する");
-		employmentBtn.setFont(new Font("HGP行書体", Font.PLAIN, 40));
-
-		backBtn = new JButton("戻る");
-		backBtn.setFont(new Font("HGP行書体", Font.PLAIN, 40));
-
-		listBtn = new JButton("社員一覧");
-		listBtn.setFont(new Font("HGP行書体", Font.PLAIN, 40));
 
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
+
+
 		panel.setBorder(border);
+		waku1.setBorder(border);
+		waku2.setBorder(border);
+		waku3.setBorder(border);
 		// panelのサイズ指定
-		panel.setPreferredSize(new Dimension(1000, 600));
+
+		panel.setPreferredSize(new Dimension(1500, 900));
 
 		panel.setLayout(null);
 
+		waku1.setPreferredSize(new Dimension(150, 200));
+		waku1.setLayout(null);
+		waku1.setBackground(Color.ORANGE);
+
+		waku2.setPreferredSize(new Dimension(150, 200));
+		waku2.setLayout(null);
+		waku2.setBackground(Color.ORANGE);
 		/**
 		 * 各部品の設定
 		 */
@@ -216,20 +227,23 @@ public class employmentscreen extends JFrame{
 		yearLbl.setBounds(810, 10, 100, 20);
 		monthLbl.setBounds(900, 10, 70, 20);
 		erandeLbl.setBounds(100, 50, 440, 30);
-		name1Lbl.setBounds(160, 135, 50, 20);
+		listLbl.setBounds(120,100,150,30);
+
 		name2Lbl.setBounds(455, 135, 50, 20);
 		name3Lbl.setBounds(750, 135, 50, 20);
-		kyaraname1.setBounds(210, 135, 160, 20);
+
 		kyaraname2.setBounds(505, 135, 160, 20);
 		kyaraname3.setBounds(800, 135, 160, 20);
-		nouryoku1.setBounds(175, 175, 50, 20);
+
+		waku1.setBounds(390,440,150,200);
+		waku2.setBounds(580,440,150,200);
+
+		nouryoku1.setBounds(390, 440, 50, 20);
 		nouryoku2.setBounds(470, 175, 50, 20);
 		nouryoku3.setBounds(765, 175, 50, 20);
+		comment.setBounds(350, 380, 500, 70);
 
-		tikara1.setBounds(310, 210, 70, 20);
-		tikara2.setBounds(310, 240, 70, 20);
-		tikara3.setBounds(310, 270, 70, 20);
-		tikara4.setBounds(310, 300, 70, 20);
+
 
 		tikara5.setBounds(620, 210, 70, 20);
 		tikara6.setBounds(620, 240, 70, 20);
@@ -241,12 +255,11 @@ public class employmentscreen extends JFrame{
 		tikara11.setBounds(915, 270, 70, 20);
 		tikara12.setBounds(915, 300, 70, 20);
 
-		puroguramu1.setBounds(195, 210, 130, 20);
-		dezain1.setBounds(195, 240, 100, 20);
-		sekkei1.setBounds(195, 270, 80, 20);
-		siki1.setBounds(195, 300, 800, 20);
-		geshuu1.setBounds(195, 330, 80, 20);
-		geshuusu1.setBounds(260, 330, 70, 20);
+		proguramu.setBounds(420, 470, 115, 20);
+		dezain.setBounds(420, 500, 115, 20);
+		sekkei.setBounds(420, 530, 115, 20);
+		siki.setBounds(420, 560, 115, 20);
+
 
 		puroguramu2.setBounds(505, 210, 130, 20);
 		dezain2.setBounds(505, 240, 100, 20);
@@ -262,12 +275,18 @@ public class employmentscreen extends JFrame{
 		geshuu3.setBounds(800, 330, 80, 20);
 		geshuusu3.setBounds(865, 330, 70, 20);
 
+		kikantext.setBounds(590,500,100,50);
 
-		employmentBtn.setBounds(450, 450,150 , 30);
-		backBtn.setBounds(450, 500, 150, 30);
-		listBtn .setBounds(800, 500, 150, 30);
+		kikanLbl.setBounds(580,425,50,50);
+		tuki.setBounds(695,500,50,50);
 
 
+
+		/*ラジオボタングループ*/
+		group.add(proguramu);
+	    group.add(dezain);
+	    group.add(sekkei);
+	    group.add(siki);
 		/**
 		 * 各部品をパネルに追加
 		 */
@@ -278,19 +297,18 @@ public class employmentscreen extends JFrame{
 		panel.add(yearLbl);
 		panel.add(monthLbl);
 		panel.add(erandeLbl);
-		panel.add(name1Lbl);
+		panel.add(listLbl);
 		panel.add(name2Lbl);
 		panel.add(name3Lbl);
-		panel.add(kyaraname1);
+
 		panel.add(kyaraname2);
 		panel.add(kyaraname3);
+
 		panel.add(nouryoku1);
 		panel.add(nouryoku2);
 		panel.add(nouryoku3);
-		panel.add(tikara1);
-		panel.add(tikara2);
-		panel.add(tikara3);
-		panel.add(tikara4);
+		panel.add(comment);
+
 		panel.add(tikara5);
 		panel.add(tikara6);
 		panel.add(tikara7);
@@ -299,12 +317,12 @@ public class employmentscreen extends JFrame{
 		panel.add(tikara10);
 		panel.add(tikara11);
 		panel.add(tikara12);
-		panel.add(puroguramu1);
-		panel.add(dezain1);
-		panel.add(sekkei1);
-		panel.add(siki1);
-		panel.add(geshuu1);
-		panel.add(geshuusu1);
+
+		panel.add(proguramu);
+		panel.add(dezain);
+		panel.add(sekkei);
+		panel.add(siki);
+
 		panel.add(puroguramu2);
 		panel.add(dezain2);
 		panel.add(sekkei2);
@@ -317,9 +335,12 @@ public class employmentscreen extends JFrame{
 		panel.add(siki3);
 		panel.add(geshuu3);
 		panel.add(geshuusu3);
-		panel.add(employmentBtn);
-		panel.add(backBtn);
-		panel.add(listBtn);
+
+		panel.add(kikanLbl);
+		panel.add(tuki);
+		panel.add(kikantext);
+		panel.add(waku1);
+		panel.add(waku2);
 
 
 
@@ -327,14 +348,17 @@ public class employmentscreen extends JFrame{
 		/**
 		 * ボタンにアクションリスナーを追加
 		 */
-		backBtn.addActionListener(ctrl);
+		//resourcesBtn.addActionListener(ctrl);
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
-
-		backBtn.setActionCommand("BACK_BTN");
+		/**
+		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
+		trainingBtn.setActionCommand("MODESELECT_LOCAL");
+		requestBtn.setActionCommand("MODESELECT_FREE");
+		 */
 
 
 		/**
