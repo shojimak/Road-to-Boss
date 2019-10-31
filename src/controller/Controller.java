@@ -24,7 +24,7 @@ public class Controller implements ActionListener{
 	GameKeyView 	gameKeyView;		//Road to Boss画面
 	topView			topView;			//トップ画面
 	mainView 		mainView;			// メイン画面
-	extensionscreen  extension; 	//拡張
+	extensionscreen  extension; 		//拡張
 
 
 

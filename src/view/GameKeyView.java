@@ -23,6 +23,9 @@ public class GameKeyView extends JFrame {
 		cntnr = getContentPane();
 		cntnr.setLayout(null);
 
+		// 画面サイズ変更不可
+		setResizable(false);
+
 	}
 
 	public void setPanel(JPanel panel) {
