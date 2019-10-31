@@ -18,7 +18,7 @@ public class GameKeyView extends JFrame {
 
 		setLocation(200, 100);
 
-		setSize(1000, 1000);
+		setSize(1500, 900);
 
 		cntnr = getContentPane();
 		cntnr.setLayout(null);

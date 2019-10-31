@@ -68,14 +68,14 @@ public class Controller implements ActionListener{
 		gameKeyView.setVisible(true);
 
 		// モード選択画面を表示
-		gameKeyView.setPanel(employmentscreen.getPanel());
+		gameKeyView.setPanel(mainView.getPanel());
 
 	}
 
 	public void start() {
 
 		// モード選択画面を表示
-		gameKeyView.setPanel(employmentscreen.getPanel());
+		gameKeyView.setPanel(mainView.getPanel());
 
 	}
 
