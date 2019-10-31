@@ -48,9 +48,9 @@ public class topView extends JFrame{
 		/**
 		 * 各部品の設定
 		 */
-		titleLbl.setBounds(200, 30, 800, 200);
-		startBtn.setBounds(380, 200, 200, 70);
-		settingBtn.setBounds(380, 290, 200, 70);
+		titleLbl.setBounds(440, 200, 700, 200);
+		startBtn.setBounds(650, 500, 200, 70);
+		settingBtn.setBounds(650, 600, 200, 70);
 
 		/**
 		 * 各部品をパネルに追加
@@ -68,6 +68,8 @@ public class topView extends JFrame{
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
+		startBtn.setActionCommand("START_BTN");
+
 
 
 		/**

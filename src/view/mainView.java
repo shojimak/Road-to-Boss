@@ -3,7 +3,10 @@ package view;
 import java.awt.Dimension;
 import java.awt.Font;
 
+<<<<<<< HEAD
 import javax.swing.ImageIcon;
+=======
+>>>>>>> branch 'dev2' of https://github.com/shojimak/Road-to-Boss.git
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -67,6 +70,7 @@ public class mainView extends JFrame {
 		monthLbl = new JLabel("12月");
 		monthLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
+<<<<<<< HEAD
 		upgradeBtn = new JButton("アップグレードしますか？");
 		upgradeBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
 
@@ -76,6 +80,21 @@ public class mainView extends JFrame {
 		prevBtn.setBorder(BorderFactory.createEmptyBorder());
 		prevBtn.setContentAreaFilled(false);
 		*/
+=======
+		resourcesBtn = new JButton("人材雇用");
+		resourcesBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
+
+		trainingBtn = new JButton("育成");
+		trainingBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
+
+
+		requestBtn = new JButton("開発依頼");
+		requestBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
+
+
+		extensionBtn = new JButton("増築");
+		extensionBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
+>>>>>>> branch 'dev2' of https://github.com/shojimak/Road-to-Boss.git
 
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
 		panel.setBorder(border);
@@ -87,6 +106,7 @@ public class mainView extends JFrame {
 		/**
 		 * 各部品の設定
 		 */
+<<<<<<< HEAD
 		titleLbl.setBounds(20, 10, 70, 20);
 		addComLbl.setBounds(60, 60, 100, 20);
 		totalLbl.setBounds(100, 10, 70, 20);
@@ -98,6 +118,21 @@ public class mainView extends JFrame {
 		upgradeBtn.setBounds(310, 500, 340, 70);
 		prevBtn.setBounds(750, 500, 110, 70);
 		prev1Btn.setBounds(750, 400, 110, 70);
+=======
+		titleLbl.setBounds(30, 10, 70, 20);
+		totalLbl.setBounds(120, 10, 70, 20);
+		cacheLbl.setBounds(240, 10, 300, 20);
+		cacheyenLbl.setBounds(450, 10, 200, 20);
+		yearLbl.setBounds(1200, 10, 100, 20);
+		monthLbl.setBounds(1350, 10, 70, 20);
+		resourcesBtn.setBounds(117, 750, 200, 70);
+		trainingBtn.setBounds(472, 750, 200, 70);
+		requestBtn.setBounds(827, 750, 200, 70);
+		extensionBtn.setBounds(1182, 750, 200, 70);
+
+
+
+>>>>>>> branch 'dev2' of https://github.com/shojimak/Road-to-Boss.git
 
 		/**
 		 * 各部品をパネルに追加
@@ -110,9 +145,16 @@ public class mainView extends JFrame {
 		panel.add(cacheyenLbl);
 		panel.add(yearLbl);
 		panel.add(monthLbl);
+<<<<<<< HEAD
 		panel.add(upgradeBtn);
 		panel.add(prevBtn);
 		panel.add(prev1Btn);
+=======
+		panel.add(resourcesBtn);
+		panel.add(trainingBtn);
+		panel.add(requestBtn);
+		panel.add(extensionBtn);
+>>>>>>> branch 'dev2' of https://github.com/shojimak/Road-to-Boss.git
 
 		/**
 		 * ボタンにアクションリスナーを追加
@@ -129,6 +171,10 @@ public class mainView extends JFrame {
 		trainingBtn.setActionCommand("MODESELECT_LOCAL");
 		requestBtn.setActionCommand("MODESELECT_FREE");
 		 */
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'dev2' of https://github.com/shojimak/Road-to-Boss.git
 
 		/**
 		 * 背景設定

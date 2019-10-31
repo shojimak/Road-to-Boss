@@ -23,11 +23,13 @@ public class GameKeyView extends JFrame {
 		cntnr = getContentPane();
 		cntnr.setLayout(null);
 
+		setResizable(false);
+
 	}
 
 	public void setPanel(JPanel panel) {
 
-		panel.setBounds(0, 0, 1000, 600);
+		panel.setBounds(0, 0, 1500, 900);
 
 		cntnr.add(panel);
 
