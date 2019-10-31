@@ -9,16 +9,12 @@ import view.mainView;
 import view.topView;
 
 //勝本
-public class Controller implements ActionListener{
+public class Controller implements ActionListener {
 
-
-	GameKeyView 	gameKeyView;		//Road to Boss画面
-	topView			topView;			//トップ画面
-	mainView 		mainView;			// メイン画面
-	extensionscreen  extension; 	//拡張
-
-
-
+	GameKeyView gameKeyView; //Road to Boss画面
+	topView topView; //トップ画面
+	mainView mainView; // メイン画面
+	extensionscreen extension; //拡張
 
 	/**
 	 * mainメソッド
@@ -38,7 +34,6 @@ public class Controller implements ActionListener{
 	 */
 	public Controller() {
 
-
 		// ゲーム基幹画面クラスをインスタンス化
 		gameKeyView = new GameKeyView("Road to Boss");
 
@@ -50,8 +45,8 @@ public class Controller implements ActionListener{
 
 		extension = new extensionscreen(this);
 
-
 	}
+
 	/**
 	 * システム実行
 	 */
@@ -72,8 +67,7 @@ public class Controller implements ActionListener{
 
 	}
 
-
-	public void setGameKeyView(GameKeyView gameKeyView){
+	public void setGameKeyView(GameKeyView gameKeyView) {
 		this.gameKeyView = gameKeyView;
 	}
 
@@ -83,7 +77,7 @@ public class Controller implements ActionListener{
 		String cmd = event.getActionCommand();
 
 		//　スタートボタン
-		if(cmd.equals("START_BTN")) {
+		if (cmd.equals("START_BTN")) {
 			// 現在表示されている画面を削除
 			gameKeyView.deletePanel();
 
@@ -91,6 +85,5 @@ public class Controller implements ActionListener{
 		}
 
 	}
-
 
 }
