@@ -8,16 +8,7 @@ import view.extensionscreen;
 import view.mainView;
 import view.topView;
 
-/**
- * @author 庄島
- * @vertion 1.00(2019/01/29)
- *
- * コントローラクラス
- */
-/**
- * @author s3a2
- *
- */
+//勝本
 public class Controller implements ActionListener{
 
 
@@ -87,8 +78,17 @@ public class Controller implements ActionListener{
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO 自動生成されたメソッド・スタブ
+	public void actionPerformed(ActionEvent event) {
+		// アクションコマンドを取得
+		String cmd = event.getActionCommand();
+
+		//　スタートボタン
+		if(cmd.equals("START_BTN")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+
+			gameKeyView.setPanel(mainView.getPanel());
+		}
 
 	}
 

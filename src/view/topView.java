@@ -41,7 +41,7 @@ public class topView extends JFrame{
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
 		panel.setBorder(border);
 		// panelのサイズ指定
-		panel.setPreferredSize(new Dimension(1000, 600));
+		panel.setPreferredSize(new Dimension(1500, 900));
 
 		panel.setLayout(null);
 
@@ -68,6 +68,8 @@ public class topView extends JFrame{
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
+		startBtn.setActionCommand("START_BTN");
+
 
 
 		/**
