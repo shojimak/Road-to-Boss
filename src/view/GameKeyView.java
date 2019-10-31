@@ -1,5 +1,5 @@
 package view;
-
+// 勝本
 import java.awt.Container;
 
 import javax.swing.JFrame;

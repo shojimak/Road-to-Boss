@@ -8,16 +8,7 @@ import view.extensionscreen;
 import view.mainView;
 import view.topView;
 
-/**
- * @author 庄島
- * @vertion 1.00(2019/01/29)
- *
- * コントローラクラス
- */
-/**
- * @author s3a2
- *
- */
+//勝本
 public class Controller implements ActionListener{
 
 
