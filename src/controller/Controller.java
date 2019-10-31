@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import view.GameKeyView;
+import view.appearanceView;
 import view.extensionscreen;
 import view.mainView;
 import view.topView;
@@ -15,6 +16,7 @@ public class Controller implements ActionListener {
 	topView topView; //トップ画面
 	mainView mainView; // メイン画面
 	extensionscreen extension; //拡張
+	appearanceView appearanceView; //会社増築
 
 	/**
 	 * mainメソッド
