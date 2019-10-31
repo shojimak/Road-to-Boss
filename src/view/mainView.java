@@ -81,16 +81,19 @@ public class mainView extends JFrame{
 		/**
 		 * 各部品の設定
 		 */
-		titleLbl.setBounds(20, 10, 70, 20);
-		totalLbl.setBounds(100, 10, 70, 20);
-		cacheLbl.setBounds(190, 10, 180, 20);
-		cacheyenLbl.setBounds(380, 10, 200, 20);
-		yearLbl.setBounds(810, 10, 100, 20);
-		monthLbl.setBounds(900, 10, 70, 20);
-		resourcesBtn.setBounds(20, 750, 200, 70);
-		trainingBtn.setBounds(280, 750, 200, 70);
-		requestBtn.setBounds(540, 750, 200, 70);
-		extensionBtn.setBounds(800, 750, 200, 70);
+		titleLbl.setBounds(30, 10, 70, 20);
+		totalLbl.setBounds(120, 10, 70, 20);
+		cacheLbl.setBounds(240, 10, 300, 20);
+		cacheyenLbl.setBounds(450, 10, 200, 20);
+		yearLbl.setBounds(1200, 10, 100, 20);
+		monthLbl.setBounds(1350, 10, 70, 20);
+		resourcesBtn.setBounds(117, 750, 200, 70);
+		trainingBtn.setBounds(472, 750, 200, 70);
+		requestBtn.setBounds(827, 750, 200, 70);
+		extensionBtn.setBounds(1182, 750, 200, 70);
+
+
+
 
 		/**
 		 * 各部品をパネルに追加

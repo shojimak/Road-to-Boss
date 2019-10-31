@@ -68,6 +68,8 @@ public class topView extends JFrame{
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
+		startBtn.setActionCommand("START_BTN");
+
 
 
 		/**

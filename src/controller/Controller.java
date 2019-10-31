@@ -87,8 +87,17 @@ public class Controller implements ActionListener{
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO 自動生成されたメソッド・スタブ
+	public void actionPerformed(ActionEvent event) {
+		// アクションコマンドを取得
+		String cmd = event.getActionCommand();
+
+		//　スタートボタン
+		if(cmd.equals("START_BTN")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+
+			gameKeyView.setPanel(mainView.getPanel());
+		}
 
 	}
 

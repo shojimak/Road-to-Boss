@@ -23,6 +23,8 @@ public class GameKeyView extends JFrame {
 		cntnr = getContentPane();
 		cntnr.setLayout(null);
 
+		setResizable(false);
+
 	}
 
 	public void setPanel(JPanel panel) {
