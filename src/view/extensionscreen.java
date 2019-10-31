@@ -12,7 +12,7 @@ import javax.swing.border.BevelBorder;
 
 import controller.Controller;
 /**
- * モード選択画面クラス
+ * 増築画面クラス
  */
 public class extensionscreen extends JFrame{
 

@@ -1,5 +1,5 @@
 package view;
-// 勝本
+
 import java.awt.Dimension;
 import java.awt.Font;
 
@@ -115,16 +115,16 @@ public class mainView extends JFrame{
 		resourcesBtn.addActionListener(ctrl);
 		trainingBtn.addActionListener(ctrl);
 		requestBtn.addActionListener(ctrl);
+		extensionBtn.addActionListener(ctrl);
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
+	 	resourcesBtn.setActionCommand("EMPLOYMENT_SCREEN");
+		trainingBtn.setActionCommand("RAISE_SCREEN");
+		requestBtn.setActionCommand("REQUEST_LIST");
+		extensionBtn.setActionCommand("EXTENSION_SCREEN");
 
 
 		/**

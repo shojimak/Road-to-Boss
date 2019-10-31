@@ -4,11 +4,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import view.GameKeyView;
+import view.employmentscreen;
 import view.extensionscreen;
 import view.mainView;
+import view.raisescreen;
+import view.requestList;
 import view.topView;
 
-//勝本
+
+/**
+ * @author 庄島
+ * @vertion 1.00(2019/01/29)
+ *
+ * コントローラクラス
+ */
+/**
+ * @author s3a2
+ *
+ */
 public class Controller implements ActionListener{
 
 
@@ -16,6 +29,9 @@ public class Controller implements ActionListener{
 	topView			topView;			//トップ画面
 	mainView 		mainView;			// メイン画面
 	extensionscreen  extension; 	//拡張
+	employmentscreen employmentscreen; //人材雇用画面
+	raisescreen raisescreen;	//育成画面
+	requestList requestList;	//開発依頼画面
 
 
 
@@ -48,7 +64,17 @@ public class Controller implements ActionListener{
 		// メイン画面クラスをインスタンス化
 		mainView = new mainView(this);
 
+		//
 		extension = new extensionscreen(this);
+
+		// 人材雇用画面
+		employmentscreen = new employmentscreen(this);
+
+		// 育成画面
+		raisescreen = new raisescreen(this);
+
+		// 開発依頼画面
+		requestList = new requestList(this);
 
 
 	}
@@ -82,12 +108,71 @@ public class Controller implements ActionListener{
 		// アクションコマンドを取得
 		String cmd = event.getActionCommand();
 
-		//　スタートボタン
+		// メイン画面へ
 		if(cmd.equals("START_BTN")) {
+
 			// 現在表示されている画面を削除
 			gameKeyView.deletePanel();
 
 			gameKeyView.setPanel(mainView.getPanel());
+
+
+
+
+
+		// メイン画面で人材雇用ボタンを押された場合
+		}else if(cmd.equals("EMPLOYMENT_SCREEN")) {
+
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+			// 人材雇用画面表示
+			gameKeyView.setPanel(employmentscreen.getPanel());
+
+
+
+
+		// 人材雇用画面で戻るボタンを押された場合
+		}else if(cmd.equals("BACK_BTN")) {
+
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+			// 人材雇用画面表示
+			gameKeyView.setPanel(mainView.getPanel());
+
+
+
+
+		// メイン画面で育成ボタンが押された場合
+		}else if(cmd.equals("RAISE_SCREEN")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+
+			gameKeyView.setPanel(raisescreen.getPanel());
+
+
+
+		// メイン画面で開発依頼ボタンが押された場合
+		}else if(cmd.equals("REQUEST_LIST")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+			// 開発来画面表示
+			gameKeyView.setPanel(requestList.getPanel());
+
+
+		// 開発依頼画面で戻るボタンが押された場合
+		}else if(cmd.equals("REQUEST_BACK_BTN")) {
+				// 現在表示されている画面を削除
+				gameKeyView.deletePanel();
+
+				gameKeyView.setPanel(mainView.getPanel());
+
+
+		// メイン画面で増築ボタンが押された場合
+		}else if(cmd.equals("EXTENSION_SCREEN")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+
+			gameKeyView.setPanel(extension.getPanel());
 		}
 
 	}

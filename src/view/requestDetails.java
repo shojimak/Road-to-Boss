@@ -12,7 +12,7 @@ import javax.swing.border.BevelBorder;
 
 import controller.Controller;
 /**
- * 雇用選び画面
+ * 依頼詳細画面
  */
 public class requestDetails extends JFrame{
 
