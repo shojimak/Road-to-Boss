@@ -16,7 +16,7 @@ import controller.Controller;
  * モード選択画面クラス
  */
 public class appearanceView extends JFrame {
-
+//
 	private JPanel panel;
 	private JLabel titleLbl; //総資産
 	private JLabel totalLbl; //
