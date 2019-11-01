@@ -32,6 +32,10 @@ public class appearanceView extends JFrame {
 	private ImageIcon beforeIcon; // アップグレード前画像
 	private JLabel afterLbl; //アップグレード後
 	private ImageIcon afterIcon; // アップグレード後画像
+	private JLabel rightLbl; //右矢印
+	private ImageIcon rightIcon; // 右矢印画像
+	private JLabel conLbl; // 会社増築
+	private JLabel costLbl; //コスト
 
 	/**
 	 * コンストラクタ
@@ -54,6 +58,15 @@ public class appearanceView extends JFrame {
 
 		afterIcon = new ImageIcon(getClass().getResource("./build.jpg"));
 		afterLbl = new JLabel(afterIcon);
+
+		rightIcon = new ImageIcon(getClass().getResource("./right.jpg"));
+		rightLbl = new JLabel(rightIcon);
+
+		costLbl = new JLabel("XX万");
+		costLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+
+		conLbl = new JLabel("会社増築");
+		conLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		titleLbl = new JLabel("総資産");
 		titleLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -83,20 +96,25 @@ public class appearanceView extends JFrame {
 		/**
 		 * 各部品の設定
 		 */
-		titleLbl.setBounds(20, 10, 70, 20);
-		totalLbl.setBounds(100, 10, 70, 20);
-		cacheLbl.setBounds(190, 10, 180, 20);
-		cacheyenLbl.setBounds(380, 10, 200, 20);
-		yearLbl.setBounds(810, 10, 100, 20);
-		monthLbl.setBounds(900, 10, 70, 20);
-		upgradeBtn.setBounds(560, 750, 350, 70);
+		costLbl.setBounds(730, 700, 100, 20);
+		conLbl.setBounds(120, 100, 100, 20);
+		titleLbl.setBounds(30, 10, 70, 20);
+		totalLbl.setBounds(120, 10, 70, 20);
+		cacheLbl.setBounds(240, 10, 300, 20);
+		cacheyenLbl.setBounds(450, 10, 200, 20);
+		yearLbl.setBounds(1200, 10, 100, 20);
+		monthLbl.setBounds(1350, 10, 70, 20);
+		upgradeBtn.setBounds(590, 750, 350, 70);
 		prevBtn.setBounds(1100, 750, 200, 70);
-		beforeLbl.setBounds(200, 150, 450, 450);
-		afterLbl.setBounds(800, 150, 450, 450);
+		beforeLbl.setBounds(100, 150, 450, 450);
+		afterLbl.setBounds(950, 150, 450, 450);
+		rightLbl.setBounds(600, 250, 300, 300);
 
 		/**
 		 * 各部品をパネルに追加
 		 */
+		panel.add(costLbl);
+		panel.add(conLbl);
 		panel.add(titleLbl);
 		panel.add(totalLbl);
 		panel.add(cacheLbl);
@@ -107,6 +125,7 @@ public class appearanceView extends JFrame {
 		panel.add(prevBtn);
 		panel.add(beforeLbl);
 		panel.add(afterLbl);
+		panel.add(rightLbl);
 
 		/**
 		 * ボタンにアクションリスナーを追加
@@ -118,11 +137,8 @@ public class appearanceView extends JFrame {
 		 * ボタンにアクションコマンドを定義
 		 */
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
+		upgradeBtn.setActionCommand("APPEARANCE_UPGRADE");
+		prevBtn.setActionCommand("APPEARANCE_PREV");
 
 		/**
 		 * 背景設定
