@@ -1,5 +1,5 @@
 package view;
-
+// カツモト
 
 import java.awt.Dimension;
 import java.awt.Font;
