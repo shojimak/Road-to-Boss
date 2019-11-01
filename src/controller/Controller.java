@@ -12,16 +12,7 @@ import view.requestList;
 import view.topView;
 
 
-/**
- * @author 庄島
- * @vertion 1.00(2019/01/29)
- *
- * コントローラクラス
- */
-/**
- * @author s3a2
- *
- */
+
 public class Controller implements ActionListener{
 
 
