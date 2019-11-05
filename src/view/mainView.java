@@ -3,6 +3,7 @@ package view;
 import java.awt.Dimension;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,7 +27,8 @@ public class mainView extends JFrame{
 	private JButton trainingBtn;	    //育成ボタン
 	private JButton requestBtn;	    //開発依頼ボタン
 	private JButton extensionBtn;      //増築ボタン
-
+	private ImageIcon aiueo;
+	private JLabel beforeLbl;
 
 	/**
 	 * コンストラクタ
@@ -38,6 +40,15 @@ public class mainView extends JFrame{
 		 * 各部品のインスタンス生成
 		 */
 		panel = new JPanel();
+
+		/*
+		 * aiueo = new ImageIcon(getClass().getResource("./building1.PNG"));
+		beforeLbl = new JLabel(aiueo);
+		 */
+
+
+
+
 
 		titleLbl = new JLabel("総資産");
 		titleLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -74,7 +85,7 @@ public class mainView extends JFrame{
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
 		panel.setBorder(border);
 		// panelのサイズ指定
-		panel.setPreferredSize(new Dimension(1000, 600));
+		panel.setPreferredSize(new Dimension(1500, 900));
 
 		panel.setLayout(null);
 
@@ -91,6 +102,7 @@ public class mainView extends JFrame{
 		trainingBtn.setBounds(472, 750, 200, 70);
 		requestBtn.setBounds(827, 750, 200, 70);
 		extensionBtn.setBounds(1182, 750, 200, 70);
+		//beforeLbl.setBounds(100, 300, 800, 300);
 
 
 
@@ -108,6 +120,7 @@ public class mainView extends JFrame{
 		panel.add(trainingBtn);
 		panel.add(requestBtn);
 		panel.add(extensionBtn);
+		//panel.add(beforeLbl);
 
 		/**
 		 * ボタンにアクションリスナーを追加
@@ -130,6 +143,10 @@ public class mainView extends JFrame{
 		/**
 		 * 背景設定
 		 */
+
+		ImagePanel phot = new ImagePanel("./building1.PNG");
+		phot.setBounds(100,0,1400,800);
+		panel.add(phot);
 
 
 

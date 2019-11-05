@@ -13,7 +13,7 @@ import javax.swing.border.BevelBorder;
 import controller.Controller;
 
 /**
- * モード選択画面クラス
+ * 外見View画面
  */
 public class appearanceView extends JFrame {
 //

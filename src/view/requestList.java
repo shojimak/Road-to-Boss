@@ -302,12 +302,14 @@ public class requestList extends JFrame{
 		 * ボタンにアクションリスナーを追加
 		 */
 		backBtn.addActionListener(ctrl);
+		ketteiBtn.addActionListener(ctrl);
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
 		backBtn.setActionCommand("REQUEST_BACK_BTN");
+		ketteiBtn.setActionCommand("KETTEI_BTN");
 
 
 
