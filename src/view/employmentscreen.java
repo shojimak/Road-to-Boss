@@ -87,7 +87,7 @@ public class employmentscreen extends JFrame{
 		titleLbl = new JLabel("総資産");
 		titleLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
-		totalLbl = new JLabel("100万");
+		totalLbl = new JLabel("100");
 		totalLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		cacheLbl = new JLabel("キャッシュフロー");
