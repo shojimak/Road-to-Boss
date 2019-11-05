@@ -26,7 +26,7 @@ public class mainView extends JFrame{
 	private JButton trainingBtn;	    //育成ボタン
 	private JButton requestBtn;	    //開発依頼ボタン
 	private JButton extensionBtn;      //増築ボタン
-
+	private JButton backBtn;      //戻るボタン
 
 	/**
 	 * コンストラクタ
@@ -71,6 +71,9 @@ public class mainView extends JFrame{
 		extensionBtn = new JButton("増築");
 		extensionBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
 
+		backBtn = new JButton("トップへ");
+		backBtn.setFont(new Font("HGP行書体", Font.PLAIN, 30));
+
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
 		panel.setBorder(border);
 		// panelのサイズ指定
@@ -91,6 +94,7 @@ public class mainView extends JFrame{
 		trainingBtn.setBounds(472, 750, 200, 70);
 		requestBtn.setBounds(827, 750, 200, 70);
 		extensionBtn.setBounds(1182, 750, 200, 70);
+		backBtn.setBounds(1200,600,200,70);
 
 
 
@@ -108,6 +112,7 @@ public class mainView extends JFrame{
 		panel.add(trainingBtn);
 		panel.add(requestBtn);
 		panel.add(extensionBtn);
+		panel.add(backBtn);
 
 		/**
 		 * ボタンにアクションリスナーを追加
@@ -115,25 +120,29 @@ public class mainView extends JFrame{
 		resourcesBtn.addActionListener(ctrl);
 		trainingBtn.addActionListener(ctrl);
 		requestBtn.addActionListener(ctrl);
+		extensionBtn.addActionListener(ctrl);
+		backBtn.addActionListener(ctrl);
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
+
+		resourcesBtn.setActionCommand("EMPLOYMENT_SCREEN");
+		trainingBtn.setActionCommand("RAISE_SCREEN");
+		requestBtn.setActionCommand("REQUEST_LIST");
+		extensionBtn.setActionCommand("EXTENSION_SCREEN");
+		backBtn.setActionCommand("MAINVIEW_BACK");
+
 
 
 		/**
 		 * 背景設定
 		 */
 
-		ImagePanel phot = new ImagePanel("./testbiru.png");
-		phot.setBounds(600,400,200,264);
-		panel.add(phot);
+		//ImagePanel phot = new ImagePanel("./testbiru.png");
+		//phot.setBounds(600,400,200,264);
+		//.add(phot);
 
 
 	}

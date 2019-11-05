@@ -45,7 +45,7 @@ public class nameselect extends JFrame{
 
 		backBtn = new JButton("戻る");
 		backBtn.setFont(new Font("HGP行書体", Font.PLAIN, 40));
-		
+
 		nametext = new JTextField("");
 
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
@@ -78,15 +78,15 @@ public class nameselect extends JFrame{
 		 * ボタンにアクションリスナーを追加
 		 */
 
+		ketteiBtn.addActionListener(ctrl);
+		backBtn.addActionListener(ctrl);
+
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
+		ketteiBtn.setActionCommand("MAINVIEW");
+		backBtn.setActionCommand("NAMESELECT_BACK");
 
 
 		/**

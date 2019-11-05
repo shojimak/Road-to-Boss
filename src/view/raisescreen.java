@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -73,6 +74,9 @@ public class raisescreen extends JFrame{
 	private JLabel siki3;
 	private JLabel geshuu3;
 	private JLabel geshuusu3;
+
+	private JButton ketteiBtn;
+	private JButton backBtn;
 
 	ButtonGroup group = new ButtonGroup();
 
@@ -194,6 +198,11 @@ public class raisescreen extends JFrame{
 		geshuu3.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		geshuusu3 = new JLabel("XX万");
 		geshuusu3.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+
+		ketteiBtn = new JButton("決定");
+		ketteiBtn.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		backBtn = new JButton("戻る");
+		backBtn.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		kikantext = new JTextField("");
 
 
@@ -280,6 +289,9 @@ public class raisescreen extends JFrame{
 		kikanLbl.setBounds(580,425,50,50);
 		tuki.setBounds(695,500,50,50);
 
+		ketteiBtn.setBounds(1200,700,100,50);
+		backBtn.setBounds(1200,800,100,50);
+
 
 
 		/*ラジオボタングループ*/
@@ -341,6 +353,10 @@ public class raisescreen extends JFrame{
 		panel.add(kikantext);
 		panel.add(waku1);
 		panel.add(waku2);
+		panel.add(ketteiBtn);
+		panel.add(backBtn);
+
+
 
 
 
@@ -348,17 +364,18 @@ public class raisescreen extends JFrame{
 		/**
 		 * ボタンにアクションリスナーを追加
 		 */
-		//resourcesBtn.addActionListener(ctrl);
+
+		ketteiBtn.addActionListener(ctrl);
+		backBtn.addActionListener(ctrl);
+
+
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
+		ketteiBtn.setActionCommand("RAISE_SCREEN_BACK");
+		backBtn.setActionCommand("RAISE_SCREEN_BACK");
 
 
 		/**

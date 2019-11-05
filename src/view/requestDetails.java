@@ -256,17 +256,14 @@ public class requestDetails extends JFrame{
 		/**
 		 * ボタンにアクションリスナーを追加
 		 */
-		//resourcesBtn.addActionListener(ctrl);
+		ketteiBtn.addActionListener(ctrl);
+		backBtn.addActionListener(ctrl);
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
-
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
+		ketteiBtn.setActionCommand("RAISESCREEN_BACK");
+		backBtn.setActionCommand("DETAILS_BACK");
 
 
 		/**

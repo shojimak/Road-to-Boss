@@ -201,17 +201,16 @@ public class memberlist extends JFrame{
 		/**
 		 * ボタンにアクションリスナーを追加
 		 */
-		//resourcesBtn.addActionListener(ctrl);
+		backBtn.addActionListener(ctrl);
+		discardBtn.addActionListener(ctrl);
+
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
+
+		backBtn.setActionCommand("MEMBER_LIST_BACK");
 
 
 		/**

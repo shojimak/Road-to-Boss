@@ -326,17 +326,19 @@ public class employmentscreen extends JFrame{
 		/**
 		 * ボタンにアクションリスナーを追加
 		 */
-		//resourcesBtn.addActionListener(ctrl);
+
+		employmentBtn.addActionListener(ctrl);
+		backBtn.addActionListener(ctrl);
+		listBtn.addActionListener(ctrl);
+
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
+		employmentBtn.setActionCommand("EMPLOYMENT");
+		backBtn.setActionCommand("BACK_BTN");
+		listBtn.setActionCommand("MEMBER_LIST");
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
 
 
 		/**

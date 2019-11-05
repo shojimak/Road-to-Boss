@@ -129,6 +129,7 @@ public class requestList extends JFrame{
 		Conditions7.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		Conditions8 = new JLabel("XX" + "万");
 		Conditions8.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+
 		Conditions9 = new JLabel("XX"+"人");
 		Conditions9.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		Conditions10 = new JLabel("３"+"ヶ月");
@@ -301,17 +302,16 @@ public class requestList extends JFrame{
 		/**
 		 * ボタンにアクションリスナーを追加
 		 */
-		//resourcesBtn.addActionListener(ctrl);
 
+		ketteiBtn.addActionListener(ctrl);
+		backBtn.addActionListener(ctrl);
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
+
+		ketteiBtn.setActionCommand("KETTEI_BTN");
+		backBtn.setActionCommand("REQUESTLIST_BACK");
 
 
 		/**
