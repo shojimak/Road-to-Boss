@@ -12,7 +12,7 @@ import javax.swing.border.BevelBorder;
 
 import controller.Controller;
 /**
- * モード選択画面クラス
+ * 社名決定画面クラス
  */
 public class nameselect extends JFrame{
 
@@ -45,7 +45,7 @@ public class nameselect extends JFrame{
 
 		backBtn = new JButton("戻る");
 		backBtn.setFont(new Font("HGP行書体", Font.PLAIN, 40));
-		
+
 		nametext = new JTextField("");
 
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);

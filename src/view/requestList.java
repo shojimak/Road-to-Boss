@@ -11,7 +11,7 @@ import javax.swing.border.BevelBorder;
 
 import controller.Controller;
 /**
- * 雇用選び画面
+ * 開発依頼画面
  */
 public class requestList extends JFrame{
 
@@ -301,17 +301,16 @@ public class requestList extends JFrame{
 		/**
 		 * ボタンにアクションリスナーを追加
 		 */
-		//resourcesBtn.addActionListener(ctrl);
+		backBtn.addActionListener(ctrl);
+		ketteiBtn.addActionListener(ctrl);
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
+		backBtn.setActionCommand("REQUEST_BACK_BTN");
+		ketteiBtn.setActionCommand("KETTEI_BTN");
+
 
 
 		/**

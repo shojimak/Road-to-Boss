@@ -12,7 +12,7 @@ import javax.swing.border.BevelBorder;
 
 import controller.Controller;
 /**
- * モード選択画面クラス
+ * 増築画面クラス
  */
 public class extensionscreen extends JFrame{
 
@@ -50,6 +50,8 @@ public class extensionscreen extends JFrame{
 	private JButton Pbuy2Btn;      //PC購入ボタン
 	private JButton Pbuy3Btn;      //PC購入ボタン
 
+	private JButton BackBtn;		//戻るボタン
+	private JButton UpgradeBtn;	//アップグレードボタン
 
 
 	/**
@@ -89,49 +91,84 @@ public class extensionscreen extends JFrame{
 		txt2Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		txt3Lbl = new JLabel("下級システムツール");
-		txt3Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		txt3Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 35));
 
 		txt4Lbl = new JLabel("中級システムツール");
-		txt4Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		txt4Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 35));
 
 		txt5Lbl = new JLabel("上級システムツール");
-		txt5Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		txt5Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 35));
 
 		txt6Lbl = new JLabel("パソコン");
 		txt6Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		txt7Lbl = new JLabel("低スペックパソコン");
-		txt7Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		txt7Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 35));
 
 		txt8Lbl = new JLabel("中スペックパソコン");
-		txt8Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		txt8Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 35));
 
 		txt9Lbl = new JLabel("高スペックパソコン");
-		txt9Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		txt9Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 35));
+
+
+
+		/*
+		 * 値段
+		 */
+		Tyen1Lbl = new JLabel("30万");
+		Tyen1Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
+
+		Tyen2Lbl = new JLabel("50万");
+		Tyen2Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
+
+		Tyen3Lbl = new JLabel("70万");
+		Tyen3Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
+
+		Pyen1Lbl = new JLabel("10万");
+		Pyen1Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
+
+		Pyen2Lbl = new JLabel("20万");
+		Pyen2Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
+
+		Pyen3Lbl = new JLabel("30万");
+		Pyen3Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
+
 
 
 		/*
 		 * 購入ボタン
 		 */
-		Tbuy1Btn = new JButton("購入する");
+		Tbuy1Btn = new JButton("購入");
 		Tbuy1Btn.setFont(new Font("HGP行書体", Font.PLAIN, 20));
 
-		Tbuy2Btn = new JButton("購入する");
+		Tbuy2Btn = new JButton("購入");
 		Tbuy2Btn.setFont(new Font("HGP行書体", Font.PLAIN, 20));
 
 
-		Tbuy3Btn = new JButton("購入する");
+		Tbuy3Btn = new JButton("購入");
 		Tbuy3Btn.setFont(new Font("HGP行書体", Font.PLAIN, 20));
 
 
-		Pbuy1Btn = new JButton("購入する");
+		Pbuy1Btn = new JButton("購入");
 		Pbuy1Btn.setFont(new Font("HGP行書体", Font.PLAIN, 20));
 
-		Pbuy2Btn = new JButton("購入する");
+		Pbuy2Btn = new JButton("購入");
 		Pbuy2Btn.setFont(new Font("HGP行書体", Font.PLAIN, 20));
 
-		Pbuy3Btn = new JButton("購入する");
+		Pbuy3Btn = new JButton("購入");
 		Pbuy3Btn.setFont(new Font("HGP行書体", Font.PLAIN, 20));
+
+
+		/*
+		 * ボタン
+		 */
+		UpgradeBtn = new JButton("増築");
+		UpgradeBtn.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 35));
+
+		BackBtn = new JButton("戻る");
+		BackBtn.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 35));
+
 
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
 		panel.setBorder(border);
@@ -152,21 +189,36 @@ public class extensionscreen extends JFrame{
 		cacheyenLbl.setBounds(450, 10, 200, 20);
 		yearLbl.setBounds(1200, 10, 100, 20);
 		monthLbl.setBounds(1350, 10, 70, 20);
-		txt1Lbl.setBounds(35, 50, 350, 20);
-		txt2Lbl.setBounds(90, 100, 70, 20);
-		txt3Lbl.setBounds(40, 50, 350, 20);
-		txt4Lbl.setBounds(40, 50, 350, 20);
-		txt5Lbl.setBounds(40, 50, 350, 20);
-		txt6Lbl.setBounds(40, 50, 350, 20);
-		txt7Lbl.setBounds(40, 50, 350, 20);
-		txt8Lbl.setBounds(40, 50, 350, 20);
-		txt9Lbl.setBounds(40, 50, 350, 20);
-		Tbuy1Btn.setBounds(20, 750, 200, 70);
-		Tbuy2Btn.setBounds(280, 750, 200, 70);
-		Tbuy3Btn.setBounds(540, 750, 200, 70);
-		Pbuy1Btn.setBounds(800, 750, 200, 70);
-		Pbuy2Btn.setBounds(800, 750, 200, 70);
-		Pbuy3Btn.setBounds(800, 750, 200, 70);
+
+
+		txt1Lbl.setBounds(35, 60, 350, 20);
+		txt2Lbl.setBounds(90, 120, 70, 20);
+		txt3Lbl.setBounds(100, 200, 350, 35);
+		txt4Lbl.setBounds(100, 245, 350, 35);
+		txt5Lbl.setBounds(100, 290, 350, 35);
+		txt6Lbl.setBounds(70, 400, 350, 20);
+		txt7Lbl.setBounds(100, 450, 350, 35);
+		txt8Lbl.setBounds(100, 495, 350, 35);
+		txt9Lbl.setBounds(100, 540, 350, 35);
+
+
+		Tyen1Lbl.setBounds(470, 200, 60, 35);
+		Tyen2Lbl.setBounds(470, 245, 60, 35);
+		Tyen3Lbl.setBounds(470, 290, 60, 35);
+		Pyen1Lbl.setBounds(470, 450, 60, 35);
+		Pyen2Lbl.setBounds(470, 495, 60, 35);
+		Pyen3Lbl.setBounds(470, 540, 60, 35);
+
+
+		Tbuy1Btn.setBounds(600, 200, 80, 35);
+		Tbuy2Btn.setBounds(600, 245, 80, 35);
+		Tbuy3Btn.setBounds(600, 290, 80, 35);
+		Pbuy1Btn.setBounds(600, 450, 80, 35);
+		Pbuy2Btn.setBounds(600, 495, 80, 35);
+		Pbuy3Btn.setBounds(600, 540, 80, 35);
+
+		UpgradeBtn.setBounds(1000, 550, 200, 70);
+		BackBtn.setBounds(1000, 700, 200, 70);
 
 		waku.setBounds(40, 50, 200, 70);
 
@@ -179,31 +231,44 @@ public class extensionscreen extends JFrame{
 		panel.add(cacheyenLbl);
 		panel.add(yearLbl);
 		panel.add(monthLbl);
+		panel.add(Tyen1Lbl);
+		panel.add(Tyen2Lbl);
+		panel.add(Tyen3Lbl);
+		panel.add(Pyen1Lbl);
+		panel.add(Pyen2Lbl);
+		panel.add(Pyen3Lbl);
+		panel.add(txt1Lbl);
+		panel.add(txt2Lbl);
+		panel.add(txt3Lbl);
+		panel.add(txt4Lbl);
+		panel.add(txt5Lbl);
+		panel.add(txt6Lbl);
+		panel.add(txt7Lbl);
+		panel.add(txt8Lbl);
+		panel.add(txt9Lbl);
 		panel.add(Tbuy1Btn);
 		panel.add(Tbuy2Btn);
 		panel.add(Tbuy3Btn);
 		panel.add(Pbuy1Btn);
 		panel.add(Pbuy2Btn);
 		panel.add(Pbuy3Btn);
-		panel.add(txt1Lbl);
-		panel.add(txt2Lbl);
+		panel.add(BackBtn);
+		panel.add(UpgradeBtn);
 		//panel.add(waku);
 
 		/**
 		 * ボタンにアクションリスナーを追加
 		 */
 
+		BackBtn.addActionListener(ctrl);
+		UpgradeBtn.addActionListener(ctrl);
 
 		/**
 		 * ボタンにアクションコマンドを定義
 		 */
 
-		/**
-		 * resourcesBtn.setActionCommand("MODESELECT_RANDOM");
-		trainingBtn.setActionCommand("MODESELECT_LOCAL");
-		requestBtn.setActionCommand("MODESELECT_FREE");
-		 */
-
+		BackBtn.setActionCommand("EXTENSION_BACK_BTN");
+		UpgradeBtn.setActionCommand("UPGRADE_BTN");
 
 		/**
 		 * 背景設定

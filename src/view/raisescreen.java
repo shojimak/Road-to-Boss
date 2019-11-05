@@ -14,7 +14,7 @@ import javax.swing.border.BevelBorder;
 
 import controller.Controller;
 /**
- * 雇用選び画面
+ * 育成画面
  */
 public class raisescreen extends JFrame{
 

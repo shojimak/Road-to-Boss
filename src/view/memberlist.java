@@ -11,7 +11,7 @@ import javax.swing.border.BevelBorder;
 
 import controller.Controller;
 /**
- * 雇用選び画面
+ * 人材一覧画面
  */
 public class memberlist extends JFrame{
 
