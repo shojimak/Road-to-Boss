@@ -4,10 +4,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import view.GameKeyView;
+import view.appearanceView;
 import view.employmentscreen;
 import view.extensionscreen;
 import view.mainView;
 import view.raisescreen;
+import view.requestDetails;
 import view.requestList;
 import view.topView;
 
@@ -23,6 +25,8 @@ public class Controller implements ActionListener{
 	employmentscreen employmentscreen; //人材雇用画面
 	raisescreen raisescreen;	//育成画面
 	requestList requestList;	//開発依頼画面
+	requestDetails requestdetails; //開発詳細画面
+	appearanceView appearanceView; //外見View画面
 
 
 
@@ -66,6 +70,12 @@ public class Controller implements ActionListener{
 
 		// 開発依頼画面
 		requestList = new requestList(this);
+
+		// 依頼詳細画面
+		requestdetails = new requestDetails(this);
+
+		// 外見View画面
+		appearanceView = new appearanceView(this);
 
 
 	}
@@ -150,6 +160,24 @@ public class Controller implements ActionListener{
 			gameKeyView.setPanel(requestList.getPanel());
 
 
+		// 開発依頼画面で決定ボタンが押された場合
+		}else if(cmd.equals("KETTEI_BTN")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+			// 開発来画面表示
+			gameKeyView.setPanel(requestdetails.getPanel());
+
+
+
+		// 依頼詳細画面で戻るボタンが押された場合
+		}else if(cmd.equals("RAISESCREEN_BACK")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+			// 開発来画面表示
+			gameKeyView.setPanel(requestList.getPanel());
+
+
+
 		// 開発依頼画面で戻るボタンが押された場合
 		}else if(cmd.equals("REQUEST_BACK_BTN")) {
 				// 現在表示されている画面を削除
@@ -164,6 +192,23 @@ public class Controller implements ActionListener{
 			gameKeyView.deletePanel();
 
 			gameKeyView.setPanel(extension.getPanel());
+
+
+		// 増築画面で増築ボタンが押された場合
+		}else if(cmd.equals("UPGRADE_BTN")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+
+			gameKeyView.setPanel(appearanceView.getPanel());
+
+
+
+		// 増築画面で戻るボタンが押された場合
+		}else if(cmd.equals("EXTENSION_BACK_BTN")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+
+			gameKeyView.setPanel(mainView.getPanel());
 		}
 
 	}
