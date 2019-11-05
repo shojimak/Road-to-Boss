@@ -15,7 +15,7 @@ import view.topView;
 
 
 
-// 勝本
+
 public class Controller implements ActionListener{
 
 
