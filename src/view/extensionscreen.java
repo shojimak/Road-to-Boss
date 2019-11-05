@@ -35,12 +35,6 @@ public class extensionscreen extends JFrame{
 	private JLabel txt8Lbl;			//中スペックパソコン
 	private JLabel txt9Lbl;			//高スペックパソコン
 
-	private JLabel Tyen1Lbl;			//
-	private JLabel Tyen2Lbl;
-	private JLabel Tyen3Lbl;
-	private JLabel Pyen1Lbl;
-	private JLabel Pyen2Lbl;
-	private JLabel Pyen3Lbl;
 
 
 	private JButton Tbuy1Btn;      //ツール購入ボタン
@@ -137,7 +131,7 @@ public class extensionscreen extends JFrame{
 		panel.setBorder(border);
 		waku.setBorder(border);
 		// panelのサイズ指定
-		panel.setPreferredSize(new Dimension(1000, 600));
+		panel.setPreferredSize(new Dimension(1500, 900));
 		waku.setPreferredSize(new Dimension(200, 70));
 
 		panel.setLayout(null);

@@ -131,6 +131,9 @@ public class mainView extends JFrame{
 		 * 背景設定
 		 */
 
+		ImagePanel phot = new ImagePanel("./testbiru.png");
+		phot.setBounds(600,400,200,264);
+		panel.add(phot);
 
 
 	}
