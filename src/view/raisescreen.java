@@ -20,7 +20,6 @@ import controller.Controller;
 public class raisescreen extends JFrame{
 
 	private JPanel panel;
-	private JPanel waku1;
 	private JPanel waku2;
 	private JPanel waku3;
 	private JLabel titleLbl;			//総資産
@@ -91,7 +90,6 @@ public class raisescreen extends JFrame{
 		 * 各部品のインスタンス生成
 		 */
 		panel = new JPanel();
-		waku1 = new JPanel();
 		waku2 = new JPanel();
 		waku3 = new JPanel();
 
@@ -114,9 +112,9 @@ public class raisescreen extends JFrame{
 		monthLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		erandeLbl = new JLabel("育成したい人を選んでね");
-		erandeLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
+		erandeLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 40));
 		listLbl = new JLabel("社員一覧");
-		listLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
+		listLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
 
 		name2Lbl = new JLabel("名前");
 		name2Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -126,16 +124,16 @@ public class raisescreen extends JFrame{
 
 		kyaraname2 = new JLabel("オタ　タロウ");
 		kyaraname2.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
-		kyaraname3 = new JLabel("キ　マジメ");
+		kyaraname3 = new JLabel("オタ　タロウ");
 		kyaraname3.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		nouryoku1 = new JLabel("能力");
-		nouryoku1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		nouryoku1.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
 		nouryoku2 = new JLabel("能力");
 		nouryoku2.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		nouryoku3 = new JLabel("能力");
 		nouryoku3.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 		comment = new JLabel("育成したい能力、期間を決めてね");
-		comment.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 25));
+		comment.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
 
 		tikara5 = new JLabel("B");
 		tikara5.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -155,22 +153,22 @@ public class raisescreen extends JFrame{
 		tikara12.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		proguramu = new JRadioButton("プログラム");
-		proguramu.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 15));
+		proguramu.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
 		proguramu.setBackground(Color.ORANGE);
 		dezain = new JRadioButton("デザイン");
-		dezain.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 15));
+		dezain.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
 		dezain.setBackground(Color.ORANGE);
 		sekkei = new JRadioButton("設計");
-		sekkei.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 15));
+		sekkei.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
 		sekkei.setBackground(Color.ORANGE);
 		siki = new JRadioButton("指揮");
-		siki.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 15));
+		siki.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
 		siki.setBackground(Color.ORANGE);
 
 		kikanLbl = new JLabel("期間");
-		kikanLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		kikanLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
 		tuki = new JLabel("ヶ月");
-		tuki.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
+		tuki.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
 
 
 
@@ -210,7 +208,6 @@ public class raisescreen extends JFrame{
 
 
 		panel.setBorder(border);
-		waku1.setBorder(border);
 		waku2.setBorder(border);
 		waku3.setBorder(border);
 		// panelのサイズ指定
@@ -219,13 +216,14 @@ public class raisescreen extends JFrame{
 
 		panel.setLayout(null);
 
-		waku1.setPreferredSize(new Dimension(150, 200));
-		waku1.setLayout(null);
-		waku1.setBackground(Color.ORANGE);
-
 		waku2.setPreferredSize(new Dimension(150, 200));
 		waku2.setLayout(null);
-		waku2.setBackground(Color.ORANGE);
+		waku2.setBackground(Color.RED);
+
+		waku3.setPreferredSize(new Dimension(150, 200));
+		waku3.setLayout(null);
+		waku3.setBackground(Color.RED);
+
 		/**
 		 * 各部品の設定
 		 */
@@ -235,62 +233,63 @@ public class raisescreen extends JFrame{
 		cacheyenLbl.setBounds(380, 10, 200, 20);
 		yearLbl.setBounds(810, 10, 100, 20);
 		monthLbl.setBounds(900, 10, 70, 20);
-		erandeLbl.setBounds(100, 50, 440, 30);
-		listLbl.setBounds(120,100,150,30);
+		erandeLbl.setBounds(150, 100, 600, 70);
+		listLbl.setBounds(150,200,150,30);
 
-		name2Lbl.setBounds(455, 135, 50, 20);
-		name3Lbl.setBounds(750, 135, 50, 20);
+		name2Lbl.setBounds(720, 220, 50, 25);
+		name3Lbl.setBounds(1170, 220, 50, 25);
 
-		kyaraname2.setBounds(505, 135, 160, 20);
-		kyaraname3.setBounds(800, 135, 160, 20);
+		kyaraname2.setBounds(790, 220, 160, 20);
+		kyaraname3.setBounds(1240, 220, 160, 20);
 
-		waku1.setBounds(390,440,150,200);
-		waku2.setBounds(580,440,150,200);
+		waku2.setBounds(550, 200, 400, 350);
+		waku3.setBounds(1000, 200, 400, 350);
 
-		nouryoku1.setBounds(390, 440, 50, 20);
-		nouryoku2.setBounds(470, 175, 50, 20);
-		nouryoku3.setBounds(765, 175, 50, 20);
-		comment.setBounds(350, 380, 500, 70);
-
-
-
-		tikara5.setBounds(620, 210, 70, 20);
-		tikara6.setBounds(620, 240, 70, 20);
-		tikara7.setBounds(620, 270, 70, 20);
-		tikara8.setBounds(620, 300, 70, 20);
-
-		tikara9.setBounds(915, 210, 70, 20);
-		tikara10.setBounds(915, 240, 70, 20);
-		tikara11.setBounds(915, 270, 70, 20);
-		tikara12.setBounds(915, 300, 70, 20);
-
-		proguramu.setBounds(420, 470, 115, 20);
-		dezain.setBounds(420, 500, 115, 20);
-		sekkei.setBounds(420, 530, 115, 20);
-		siki.setBounds(420, 560, 115, 20);
+		nouryoku1.setBounds(465, 630, 100, 30);
+		nouryoku2.setBounds(740, 260, 50, 20);
+		nouryoku3.setBounds(1190, 260, 50, 20);
+		comment.setBounds(400, 560, 500, 70);
 
 
-		puroguramu2.setBounds(505, 210, 130, 20);
-		dezain2.setBounds(505, 240, 100, 20);
-		sekkei2.setBounds(505, 270, 80, 20);
-		siki2.setBounds(505, 300, 800, 20);
-		geshuu2.setBounds(505, 330, 80, 20);
-		geshuusu2.setBounds(570, 330, 70, 20);
 
-		puroguramu3.setBounds(800, 210, 130, 20);
-		dezain3.setBounds(800, 240, 100, 20);
-		sekkei3.setBounds(800, 270, 80, 20);
-		siki3.setBounds(800, 300, 80, 20);
-		geshuu3.setBounds(800, 330, 80, 20);
-		geshuusu3.setBounds(865, 330, 70, 20);
+		tikara5.setBounds(890, 310, 70, 20);
+		tikara6.setBounds(890, 350, 70, 20);
+		tikara7.setBounds(890, 390, 70, 20);
+		tikara8.setBounds(890, 430, 70, 20);
 
-		kikantext.setBounds(590,500,100,50);
+		tikara9.setBounds(1340, 310, 70, 20);
+		tikara10.setBounds(1340, 350, 70, 20);
+		tikara11.setBounds(1340, 390, 70, 20);
+		tikara12.setBounds(1340, 430, 70, 20);
 
-		kikanLbl.setBounds(580,425,50,50);
-		tuki.setBounds(695,500,50,50);
+		proguramu.setBounds(550, 680, 200, 35);
+		dezain.setBounds(550, 725, 200, 35);
+		sekkei.setBounds(550, 770, 200, 35);
+		siki.setBounds(550, 815, 200, 35);
+
+
+		puroguramu2.setBounds(740, 310, 130, 20);
+		dezain2.setBounds(740, 350, 100, 20);
+		sekkei2.setBounds(740, 390, 80, 20);
+		siki2.setBounds(740, 430, 800, 20);
+		geshuu2.setBounds(690, 510, 80, 20);
+		geshuusu2.setBounds(750, 510, 70, 20);
+
+		puroguramu3.setBounds(1190, 310, 130, 20);
+		dezain3.setBounds(1190, 350, 100, 20);
+		sekkei3.setBounds(1190, 390, 80, 20);
+		siki3.setBounds(1190, 430, 800, 20);
+		geshuu3.setBounds(1140, 510, 80, 20);
+		geshuusu3.setBounds(1200, 510, 70, 20);
+
+		kikantext.setBounds(850,730,100,50);
+
+		kikanLbl.setBounds(770,630,100,50);
+		tuki.setBounds(950,730,100,50);
 
 		ketteiBtn.setBounds(1200,700,100,50);
-		backBtn.setBounds(1200,800,100,50);
+		backBtn.setBounds(1200,770,100,50);
+
 
 
 
@@ -351,10 +350,10 @@ public class raisescreen extends JFrame{
 		panel.add(kikanLbl);
 		panel.add(tuki);
 		panel.add(kikantext);
-		panel.add(waku1);
-		panel.add(waku2);
 		panel.add(ketteiBtn);
 		panel.add(backBtn);
+		panel.add(waku2);
+		panel.add(waku3);
 
 
 

@@ -3,6 +3,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import view.Detailspop;
 import view.GameKeyView;
 import view.appearanceView;
 import view.employmentscreen;
@@ -32,6 +33,7 @@ public class Controller implements ActionListener{
 	appearanceView appearanceView; //外見View画面
 	memberlist memberlist;
 	nameselect nameselect;
+	Detailspop Detailspop;
 
 
 
@@ -86,6 +88,7 @@ public class Controller implements ActionListener{
 		// 外見View画面
 		appearanceView = new appearanceView(this);
 
+		Detailspop = new Detailspop(this);
 
 	}
 	/**
@@ -152,7 +155,7 @@ public class Controller implements ActionListener{
 			gameKeyView.setPanel(employmentscreen.getPanel());
 
 
-		
+
 		// 人材雇用画面で戻るボタンを押された場合
 		}else if(cmd.equals("BACK_BTN")) {
 
@@ -213,7 +216,7 @@ public class Controller implements ActionListener{
 			// 現在表示されている画面を削除
 			gameKeyView.deletePanel();
 			// 開発来画面表示
-			gameKeyView.setPanel(requestdetails.getPanel());
+			gameKeyView.setPanel(mainView.getPanel());
 
 
 		// 依頼詳細画面で戻るボタンが押された場合
@@ -225,12 +228,21 @@ public class Controller implements ActionListener{
 
 
 
-		// 開発依頼画面で戻るボタンが押された場合
-		}else if(cmd.equals("REQUEST_BACK_BTN")) {
-				// 現在表示されている画面を削除
-				gameKeyView.deletePanel();
+		// 開発依頼画面で決定ボタンが押された場合
+		}else if(cmd.equals("KAKUNIN")) {
 
-				gameKeyView.setPanel(mainView.getPanel());
+			gameKeyView.deletePanel();
+
+
+			gameKeyView.setPanel(Detailspop.getPanel());
+
+
+		// 確認画面でいいえボタンが押された場合
+		}else if(cmd.equals("KAKUNIN_BACK")) {
+			// 現在表示されている画面を削除
+			gameKeyView.deletePanel();
+			// 開発来画面表示
+			gameKeyView.setPanel(requestdetails.getPanel());
 
 
 		// メイン画面で増築ボタンが押された場合

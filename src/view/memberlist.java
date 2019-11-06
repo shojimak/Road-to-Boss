@@ -16,6 +16,7 @@ import controller.Controller;
 public class memberlist extends JFrame{
 
 	private JPanel panel;
+	private JPanel waku1;
 	private JLabel titleLbl;			//総資産
 	private JLabel totalLbl;           //
 	private JLabel cacheLbl;			//キャッシュフロー
@@ -57,6 +58,7 @@ public class memberlist extends JFrame{
 		 * 各部品のインスタンス生成
 		 */
 		panel = new JPanel();
+		waku1 = new JPanel();
 
 		titleLbl = new JLabel("総資産");
 		titleLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -77,7 +79,7 @@ public class memberlist extends JFrame{
 		monthLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		erandeLbl = new JLabel("社員一覧");
-		erandeLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
+		erandeLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 40));
 
 		name1Lbl = new JLabel("名前");
 		name1Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -122,8 +124,12 @@ public class memberlist extends JFrame{
 
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
 		panel.setBorder(border);
+		waku1.setBorder(border);
 		// panelのサイズ指定
 		panel.setPreferredSize(new Dimension(1000, 600));
+
+		waku1.setPreferredSize(new Dimension(150, 200));
+		waku1.setLayout(null);
 
 		panel.setLayout(null);
 
@@ -136,32 +142,33 @@ public class memberlist extends JFrame{
 		cacheyenLbl.setBounds(380, 10, 200, 20);
 		yearLbl.setBounds(810, 10, 100, 20);
 		monthLbl.setBounds(900, 10, 70, 20);
-		erandeLbl.setBounds(100, 50, 440, 30);
-		name1Lbl.setBounds(160, 135, 50, 20);
+		erandeLbl.setBounds(150, 100, 600, 70);
+		name1Lbl.setBounds(270, 220, 50, 25);
 
-		kyaraname1.setBounds(210, 135, 160, 20);
+		kyaraname1.setBounds(340, 220, 160, 20);
 
-		nouryoku1.setBounds(175, 175, 50, 20);
-
-
-		tikara1.setBounds(310, 210, 70, 20);
-		tikara2.setBounds(310, 240, 70, 20);
-		tikara3.setBounds(310, 270, 70, 20);
-		tikara4.setBounds(310, 300, 70, 20);
+		nouryoku1.setBounds(290, 260, 50, 20);
 
 
+		tikara1.setBounds(440, 310, 70, 20);
+		tikara2.setBounds(440, 350, 70, 20);
+		tikara3.setBounds(440, 390, 70, 20);
+		tikara4.setBounds(440, 430, 70, 20);
 
-		puroguramu1.setBounds(195, 210, 130, 20);
-		dezain1.setBounds(195, 240, 100, 20);
-		sekkei1.setBounds(195, 270, 80, 20);
-		siki1.setBounds(195, 300, 800, 20);
-		geshuu1.setBounds(195, 330, 80, 20);
-		geshuusu1.setBounds(260, 330, 70, 20);
 
+
+		puroguramu1.setBounds(290, 310, 130, 20);
+		dezain1.setBounds(290, 350, 100, 20);
+		sekkei1.setBounds(290, 390, 80, 20);
+		siki1.setBounds(290, 430, 800, 20);
+		geshuu1.setBounds(240, 510, 80, 20);
+		geshuusu1.setBounds(300, 510, 70, 20);
 
 
 		discardBtn.setBounds(1200, 700,170 , 50);
 		backBtn.setBounds(1200, 770, 170, 50);
+
+		waku1.setBounds(100, 200, 400, 350);
 
 
 		/**
@@ -195,6 +202,7 @@ public class memberlist extends JFrame{
 		panel.add(backBtn);
 		panel.add(discardBtn);
 
+		panel.add(waku1);
 
 
 

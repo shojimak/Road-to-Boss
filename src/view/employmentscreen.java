@@ -16,6 +16,9 @@ import controller.Controller;
 public class employmentscreen extends JFrame{
 
 	private JPanel panel;
+	private JPanel waku1;
+	private JPanel waku2;
+	private JPanel waku3;
 	private JLabel titleLbl;			//総資産
 	private JLabel totalLbl;           //
 	private JLabel cacheLbl;			//キャッシュフロー
@@ -84,6 +87,10 @@ public class employmentscreen extends JFrame{
 		 */
 		panel = new JPanel();
 
+		waku1 = new JPanel();
+		waku2 = new JPanel();
+		waku3 = new JPanel();
+
 		titleLbl = new JLabel("総資産");
 		titleLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
@@ -103,7 +110,7 @@ public class employmentscreen extends JFrame{
 		monthLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		erandeLbl = new JLabel("雇用したい人を選んでね");
-		erandeLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 30));
+		erandeLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 40));
 
 		name1Lbl = new JLabel("名前");
 		name1Lbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
@@ -200,76 +207,97 @@ public class employmentscreen extends JFrame{
 
 		BevelBorder border = new BevelBorder(BevelBorder.RAISED);
 		panel.setBorder(border);
+		waku1.setBorder(border);
+		waku2.setBorder(border);
+		waku3.setBorder(border);
 		// panelのサイズ指定
 		panel.setPreferredSize(new Dimension(1000, 600));
 
 		panel.setLayout(null);
 
+		waku1.setPreferredSize(new Dimension(150, 200));
+		waku1.setLayout(null);
+
+
+		waku2.setPreferredSize(new Dimension(150, 200));
+		waku2.setLayout(null);
+
+		waku3.setPreferredSize(new Dimension(150, 200));
+		waku3.setLayout(null);
+
 		/**
 		 * 各部品の設定
 		 */
-		titleLbl.setBounds(20, 10, 70, 20);
-		totalLbl.setBounds(100, 10, 70, 20);
-		cacheLbl.setBounds(190, 10, 180, 20);
-		cacheyenLbl.setBounds(380, 10, 200, 20);
-		yearLbl.setBounds(810, 10, 100, 20);
-		monthLbl.setBounds(900, 10, 70, 20);
-		erandeLbl.setBounds(100, 50, 440, 30);
-		name1Lbl.setBounds(160, 135, 50, 20);
-		name2Lbl.setBounds(455, 135, 50, 20);
-		name3Lbl.setBounds(750, 135, 50, 20);
-		kyaraname1.setBounds(210, 135, 160, 20);
-		kyaraname2.setBounds(505, 135, 160, 20);
-		kyaraname3.setBounds(800, 135, 160, 20);
-		nouryoku1.setBounds(175, 175, 50, 20);
-		nouryoku2.setBounds(470, 175, 50, 20);
-		nouryoku3.setBounds(765, 175, 50, 20);
 
-		tikara1.setBounds(310, 210, 70, 20);
-		tikara2.setBounds(310, 240, 70, 20);
-		tikara3.setBounds(310, 270, 70, 20);
-		tikara4.setBounds(310, 300, 70, 20);
-
-		tikara5.setBounds(620, 210, 70, 20);
-		tikara6.setBounds(620, 240, 70, 20);
-		tikara7.setBounds(620, 270, 70, 20);
-		tikara8.setBounds(620, 300, 70, 20);
-
-		tikara9.setBounds(915, 210, 70, 20);
-		tikara10.setBounds(915, 240, 70, 20);
-		tikara11.setBounds(915, 270, 70, 20);
-		tikara12.setBounds(915, 300, 70, 20);
-
-		puroguramu1.setBounds(195, 210, 130, 20);
-		dezain1.setBounds(195, 240, 100, 20);
-		sekkei1.setBounds(195, 270, 80, 20);
-		siki1.setBounds(195, 300, 800, 20);
-		geshuu1.setBounds(195, 330, 80, 20);
-		geshuusu1.setBounds(260, 330, 70, 20);
-
-		puroguramu2.setBounds(505, 210, 130, 20);
-		dezain2.setBounds(505, 240, 100, 20);
-		sekkei2.setBounds(505, 270, 80, 20);
-		siki2.setBounds(505, 300, 800, 20);
-		geshuu2.setBounds(505, 330, 80, 20);
-		geshuusu2.setBounds(570, 330, 70, 20);
-
-		puroguramu3.setBounds(800, 210, 130, 20);
-		dezain3.setBounds(800, 240, 100, 20);
-		sekkei3.setBounds(800, 270, 80, 20);
-		siki3.setBounds(800, 300, 80, 20);
-		geshuu3.setBounds(800, 330, 80, 20);
-		geshuusu3.setBounds(865, 330, 70, 20);
+		waku1.setBounds(100, 200, 400, 350);
+		waku2.setBounds(550, 200, 400, 350);
+		waku3.setBounds(1000, 200, 400, 350);
 
 
-		employmentBtn.setBounds(450, 450,150 , 30);
-		backBtn.setBounds(450, 500, 150, 30);
-		listBtn .setBounds(800, 500, 150, 30);
+		titleLbl.setBounds(30, 10, 70, 20);
+		totalLbl.setBounds(120, 10, 70, 20);
+		cacheLbl.setBounds(240, 10, 300, 20);
+		cacheyenLbl.setBounds(450, 10, 200, 20);
+		yearLbl.setBounds(1200, 10, 100, 20);
+		monthLbl.setBounds(1350, 10, 70, 20);
+		erandeLbl.setBounds(150, 100, 600, 70);
+		name1Lbl.setBounds(270, 220, 50, 25);
+		name2Lbl.setBounds(720, 220, 50, 25);
+		name3Lbl.setBounds(1170, 220, 50, 25);
+		kyaraname1.setBounds(340, 220, 160, 20);
+		kyaraname2.setBounds(790, 220, 160, 20);
+		kyaraname3.setBounds(1240, 220, 160, 20);
+		nouryoku1.setBounds(290, 260, 50, 20);
+		nouryoku2.setBounds(740, 260, 50, 20);
+		nouryoku3.setBounds(1190, 260, 50, 20);
+
+		tikara1.setBounds(440, 310, 70, 20);
+		tikara2.setBounds(440, 350, 70, 20);
+		tikara3.setBounds(440, 390, 70, 20);
+		tikara4.setBounds(440, 430, 70, 20);
+
+		tikara5.setBounds(890, 310, 70, 20);
+		tikara6.setBounds(890, 350, 70, 20);
+		tikara7.setBounds(890, 390, 70, 20);
+		tikara8.setBounds(890, 430, 70, 20);
+
+		tikara9.setBounds(1340, 310, 70, 20);
+		tikara10.setBounds(1340, 350, 70, 20);
+		tikara11.setBounds(1340, 390, 70, 20);
+		tikara12.setBounds(1340, 430, 70, 20);
+
+		puroguramu1.setBounds(290, 310, 130, 20);
+		dezain1.setBounds(290, 350, 100, 20);
+		sekkei1.setBounds(290, 390, 80, 20);
+		siki1.setBounds(290, 430, 800, 20);
+		geshuu1.setBounds(240, 510, 80, 20);
+		geshuusu1.setBounds(300, 510, 70, 20);
+
+		puroguramu2.setBounds(740, 310, 130, 20);
+		dezain2.setBounds(740, 350, 100, 20);
+		sekkei2.setBounds(740, 390, 80, 20);
+		siki2.setBounds(740, 430, 800, 20);
+		geshuu2.setBounds(690, 510, 80, 20);
+		geshuusu2.setBounds(750, 510, 70, 20);
+
+		puroguramu3.setBounds(1190, 310, 130, 20);
+		dezain3.setBounds(1190, 350, 100, 20);
+		sekkei3.setBounds(1190, 390, 80, 20);
+		siki3.setBounds(1190, 430, 800, 20);
+		geshuu3.setBounds(1140, 510, 80, 20);
+		geshuusu3.setBounds(1200, 510, 70, 20);
+
+
+		employmentBtn.setBounds(680,700,250,50);
+		backBtn.setBounds(680,765,250, 50);
+		listBtn .setBounds(1200,750,250,50);
 
 
 		/**
 		 * 各部品をパネルに追加
 		 */
+
+
 		panel.add(titleLbl);
 		panel.add(totalLbl);
 		panel.add(cacheLbl);
@@ -319,6 +347,9 @@ public class employmentscreen extends JFrame{
 		panel.add(employmentBtn);
 		panel.add(backBtn);
 		panel.add(listBtn);
+		panel.add(waku1);
+		panel.add(waku2);
+		panel.add(waku3);
 
 
 
