@@ -37,6 +37,7 @@ public class mainView extends JFrame{
 		/**
 		 * 各部品のインスタンス生成
 		 */
+
 		panel = new JPanel();
 
 		titleLbl = new JLabel("総資産");
