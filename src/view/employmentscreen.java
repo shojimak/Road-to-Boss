@@ -87,6 +87,7 @@ public class employmentscreen extends JFrame{
 		 */
 		panel = new JPanel();
 
+
 		waku1 = new JPanel();
 		waku2 = new JPanel();
 		waku3 = new JPanel();
@@ -94,7 +95,7 @@ public class employmentscreen extends JFrame{
 		titleLbl = new JLabel("総資産");
 		titleLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
-		totalLbl = new JLabel("100");
+		totalLbl = new JLabel();
 		totalLbl.setFont(new Font("HGS創英角ｺﾞｼｯｸUB", Font.BOLD, 20));
 
 		cacheLbl = new JLabel("キャッシュフロー");
